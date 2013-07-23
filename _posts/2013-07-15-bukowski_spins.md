@@ -1,4 +1,5 @@
 ---
+layout: post
 title: bukowski spins
 categories: [poetry]
 ---

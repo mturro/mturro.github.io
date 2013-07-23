@@ -1,4 +1,5 @@
 ---
+layout: post
 title: a meditation opens
 categories: [poetry]
 ---

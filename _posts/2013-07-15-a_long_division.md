@@ -1,4 +1,5 @@
 ---
+layout: post
 title: a long division
 categories: [poetry]
 ---

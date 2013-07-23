@@ -1,4 +1,5 @@
 ---
+layout: post
 title: i wrote a poem
 categories: [poetry]
 ---

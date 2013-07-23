@@ -1,4 +1,5 @@
 ---
+layout: post
 title: notes on craft
 categories: [poetry]
 ---

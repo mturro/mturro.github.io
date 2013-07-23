@@ -1,4 +1,5 @@
 ---
+layout: post
 title: a failed experiment
 categories: [poetry]
 ---

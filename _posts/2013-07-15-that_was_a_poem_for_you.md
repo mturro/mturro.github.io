@@ -1,4 +1,5 @@
 ---
+layout: post
 title: that was a poem for you
 categories: [poetry]
 ---
