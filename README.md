@@ -1,14 +1,126 @@
-## Poems in progress... 
-This repository holds work-in-progress poems written in the markdown syntax. It started as an attempt to expose my creative process (to myself and to anyone who may care to watch) and track the nature and number of edits any given version of a poem might go through. I decided to use git (as opposed to some other tool like mediawiki) simply because it makes sense to me and it's a tool I use on a daily basis. I also found it affords a level of textual simplicty that more bloated CMS style tools loose in their effort to be complete publishing tools. In the process of thinking through the implications of using a code management toolchain to write poetry I became quite interested in exploring how true the old Wordpress tag "Code is Poetry" is and whether it runs in the inverse (ie "Poetry is Code").
+Checkout [nkd.cc](http://nkd.cc "NKD")
 
-# And then this happened.
-At some point in the very early onset of this experiment the thought occurred to me that perhaps I wasn't envisioning a collection of poems, but rather had stumbled on to a framework for my own exploration of a technically focused twenty-first century epic poem. And then later on I realized that what I was in fact writing was a number of individual poems - something closer to the original intention of the repo. Whether or not this is a poem or a series of poems what seems clear to me at this point is that this is a definite attempt at coming up with a compositional technique that has something of the transparency of open source software. In other words, what is being explored here is not so much the poetic effect of language, but rather the poetic effect of process and technology.
+# NKD
 
-# A note about forking
-**This is not a collaboration project.** (At least not yet.) This poem is simply me writing to myself using tools that organically I hope will capture the evolution of the poem from raw concept to something else. It is not intended for any other purpose than to exercise my brain and provide insight into the effects of code producing tools and web-level transparency on the eventual work. Even so, I am licensing it under a [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US). What that means is that you can (for whatever reason) fork this repo if you like. You can also edit, rewrite, and otherwise use this poem in any way you should see fit. The only restrictions are that you make your resulting repository available under the same terms, that you give proper attribution, and that you do not use the work or resulting work in a commercial way. It is also my hope that should you choose to fork this repository you continue to use git for all version control and editing and Markdown for all markup. In other words, please refrain from taking this poem offline or into some other platform other than github and please keep the work in a format that will make it easy to merge back into a main repository.
+#### Light-weight template for a responsive HTML5/SCSS Jekyll project 
 
-# Metadata
-While there is no formal metadata syntax at the outset of this project, I am considering using a standardized metadata format (some sort of YAML perhaps) and will update this space with that information when I have decided on what, if anything, it will be.
+NKD just works.
+Start developing your prototype in [jekyll](http://jekyllrb.com "Jekyll - Simple, blog-aware, static sites") 
+without any of the boring setup.
 
-# Further Thoughts
-For more on the what and why of this all check the [wiki](http://github.com/mturro/poem/wiki) and be sure to read commit messages - some are informative.
+# Features
+
+* Modular file structure, easy to extend or get rid of existing code.
+* Mobile friendly responsive type scale
+* A light-weight SCSS base that starts with Normalize.css - 1.2KB minified / 214B gzipped.
+* Thoroughly commented code (Easy to get going if it's your first jekyll project)
+* Two media queries for tablet and desktop size screens. Lends itself to mobile-first design.
+
+# Getting started
+
+* Create a new repo for your project on Github
+* In terminal run 
+```bash
+    git clone git@github.com:mrmrs/nkd.git [yourNewRepoName]
+    cd [yourNewRepoName]
+    git remote rm origin
+    git remote add origin git@github.com:[yourUserName]/[yourNewRepoName].git
+    git remote -v
+```
+
+* git remote -v will allow you to check that you have changed the remote origin correctly. The output should look like:
+```bash
+    origin git@github.com:[yourUserName]/[yourNewRepoName].git (fetch)
+    origin  git@github.com:[yourUserName]/[yourNewRepoName].git (push)
+```
+  
+* Once you add & commit files you are ready to publish run:
+```bash
+git push -u origin master
+```
+
+# Batteries Not Included
+
+File structure is as follows:
+
+```
+nkd                                 [ Site root ] 
+  ├── README.md                     [ You are here ]
+  ├── Rakefile                      [ Rake tasks! ]
+  ├── _config.yml                   [ Site options ]
+  ├── _includes
+  │   ├── _footer.html
+  │   ├── _head.html
+  │   ├── _js_includes.html
+  │   └── _navigation_main.html
+  ├── _layouts
+  │   ├── default.html
+  │   └── post.html
+  ├── _posts
+  │   └── 2020-01-01-example.html
+  ├── _resources
+  │   └── favicons.ai
+  ├── _sass
+  │   ├── _grid.scss
+  │   ├── _normalize.scss           [http://necolas.github.io/normalize.css/]
+  │   ├── _queries.scss             [Configurable media queries]
+  │   ├── _styles.scss
+  │   ├── _type.scss
+  │   ├── _variables.scss
+  │   └── i.scss                    [Imports .scss files, compiles to css/i.css]
+  ├── css
+  │   └── i.css                     [1.8KB minified / 214B gzipped - includes normalize.css]
+  ├── favicon.icns
+  ├── favicon.ico
+  ├── index.html                    [index file that's served up at root. The "homepage" if you will.]
+  ├── touch-icon-ipad-precomposed.png
+  ├── touch-icon-ipad-retina-precomposed.png
+  ├── touch-icon-iphone-precomposed.png
+  └── touch-icon-iphone-retina-precomposed.png
+```
+
+# Rake Tasks
+## WAIT I'M A DESIGNER WHAT IS RAKE 
+Rake is super simple. Don't be afraid. In this instance it's used to map unix commands
+to "rake tasks". It's a lot easier to remember 'rake dev' then jekyll serve --watch, well 
+it is for me anyways. If you don't like any of these commands, don't be scared. Rakefile
+is a super easy file to edit - even if it looks scary because it doesn't have an extension.
+
+Start the jekyll server on port 4000. Preview in your browser at http://localhost:4000
+### rake dev
+```
+jekyll serve --watch
+```
+
+Run this to start sass development and preserve css comments. Helpful for debugging. Outputs to css/includes.css. 
+### rake sass
+```
+sass --watch _sass:css
+```
+
+Run this to start the sass autocompiler with minified outpu. Outputs to /nkd/css/i.css.
+### rake minify
+```
+sass --watch _sass:css --style compressed
+```
+
+Run this to delete the _site directory. Use if you don't want to keep generated site locally unless actively developing.
+### rake clean
+```
+rm -rf _site
+```
+
+
+# Resources
+
+There is an included Adobe Illustrator file that has artboards for every favicon size you'll need.
+If you're into that sort of thing. There are premade favicons you will want to replace or remove
+reference to.
+
+# Author
+[MRMRS](http://mrmrs.cc "Adam Morse - Designer Developer")
+
+# License
+This work is licensed under a [Creative Commons Attribution 3.0 Unported
+License](http://creativecommons.org/licenses/by/3.0/ "Creative Commons
+License").
