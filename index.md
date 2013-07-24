@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Hello World!
-tagline: Supporting tagline
+title: dose.io
+tagline: slow-drip poetics
 ---
 {% include JB/setup %}
 
