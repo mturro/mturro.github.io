@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 
 ## this is written in haste and may contain errors
@@ -13,4 +13,3 @@ I keep hitting the slash key at the end of sentences/
     
     Stop. 
     :wq
-
