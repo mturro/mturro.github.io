@@ -40,11 +40,4 @@ permalink: pretty
 # /:month-month:day-:year/:title.html/            => 04-29-2009/slap-chop.html
 # /blog/:yearr/:month/:day/:title                 => /blog/2009/04/29/slap-chop/index.html
 
-# Uncomment if you have pygments installed. Used for code syntax highlighting. 
-# If you're not doing syntax highlighting you can delete this.
-#pygments: true
-#
-prose:
-  rooturl: '_posts'
-  siteurl: 'http://dose.io'
-  media: '_resources'
+
