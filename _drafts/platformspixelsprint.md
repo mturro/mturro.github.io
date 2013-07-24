@@ -1,17 +1,18 @@
 ---
 layout: post
-title: Platoforms > Pixels + Print
+title: "Platoforms > Pixels + Print"
 categories: commentary
+published: true
 ---
 
-*This is going to sound strange.* And it is strange. It’s a really strange,
+**This is going to sound strange.** And it is strange. It’s a really strange,
 weird, out there, crazy theory. Still, as the sliding scale of influence
 slips slowly away from the fixity of print and toward the fluidity of
 networked information one thing is becoming clear to me: publishers need
 to stop thinking about the reader.
 
 OK, maybe not stop thinking about the reader, but rather start thinking
-about how the world the reader lives in continues to change. We need to
+about how the world the reader lives in _**continues**_ to change. We need to
 come to terms with the fact that we all live in a state of constant
 churn where the possible touchpoints for our editorial multiply faster
 than we can effectively service them. We can’t simply take our current
