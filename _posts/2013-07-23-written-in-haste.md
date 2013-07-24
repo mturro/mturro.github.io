@@ -1,5 +1,7 @@
 ---
 published: true
+layout: post
+categories: poetry
 ---
 
 ## this is written in haste and may contain errors
