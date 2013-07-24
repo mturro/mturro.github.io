@@ -1,126 +1,46 @@
-Checkout [nkd.cc](http://nkd.cc "NKD")
+# Jekyll-Bootstrap
 
-# NKD
+The quickest way to start and publish your Jekyll powered blog. 100% compatible with GitHub pages
 
-#### Light-weight template for a responsive HTML5/SCSS Jekyll project 
+## Usage
 
-NKD just works.
-Start developing your prototype in [jekyll](http://jekyllrb.com "Jekyll - Simple, blog-aware, static sites") 
-without any of the boring setup.
+For all usage and documentation please see: <http://jekyllbootstrap.com>
 
-# Features
+## Version
 
-* Modular file structure, easy to extend or get rid of existing code.
-* Mobile friendly responsive type scale
-* A light-weight SCSS base that starts with Normalize.css - 1.2KB minified / 214B gzipped.
-* Thoroughly commented code (Easy to get going if it's your first jekyll project)
-* Two media queries for tablet and desktop size screens. Lends itself to mobile-first design.
+0.3.0 - stable and versioned using [semantic versioning](http://semver.org/).
 
-# Getting started
+**NOTE:** 0.3.0 introduces a new theme which is not backwards compatible in the sense it won't _look_ like the old version.
+However, the actual API has not changed at all.
+You might want to run 0.3.0 in a branch to make sure you are ok with the theme design changes.
 
-* Create a new repo for your project on Github
-* In terminal run 
-```bash
-    git clone git@github.com:mrmrs/nkd.git [yourNewRepoName]
-    cd [yourNewRepoName]
-    git remote rm origin
-    git remote add origin git@github.com:[yourUserName]/[yourNewRepoName].git
-    git remote -v
-```
+## Contributing 
 
-* git remote -v will allow you to check that you have changed the remote origin correctly. The output should look like:
-```bash
-    origin git@github.com:[yourUserName]/[yourNewRepoName].git (fetch)
-    origin  git@github.com:[yourUserName]/[yourNewRepoName].git (push)
-```
+This repository tracks 2 projects:
+
+- **Jekyll-Bootstrap Framework.**  
+  The framework for which users should clone and build their blog on top of is available in the master branch.
   
-* Once you add & commit files you are ready to publish run:
-```bash
-git push -u origin master
-```
+  To contribute to the framework please make sure to checkout your branch based on `jb-development`!!
+  This is very important as it allows me to accept your pull request without having to publish a public version release.
+  
+  Small, atomic Features, bugs, etc.   
+  Use the `jb-development` branch but note it will likely change fast as pull requests are accepted.   
+  Please rebase as often as possible when working.   
+  Work on small, atomic features/bugs to avoid upstream commits affecting/breaking your development work.
+  
+  For Big Features or major API extensions/edits:   
+  This is the one case where I'll accept pull-requests based off the master branch.
+  This allows you to work in isolation but it means I'll have to manually merge your work into the next public release.
+  Translation : it might take a bit longer so please be patient! (but sincerely thank you).
+ 
+- **Jekyll-Bootstrap Documentation Website.**    
+  The documentation website at <http://jekyllbootstrap.com> is maintained in the gh-pages branch.
+  Please fork and contribute documentation additions to this branch only.
 
-# Batteries Not Included
-
-File structure is as follows:
-
-```
-nkd                                 [ Site root ] 
-  ├── README.md                     [ You are here ]
-  ├── Rakefile                      [ Rake tasks! ]
-  ├── _config.yml                   [ Site options ]
-  ├── _includes
-  │   ├── _footer.html
-  │   ├── _head.html
-  │   ├── _js_includes.html
-  │   └── _navigation_main.html
-  ├── _layouts
-  │   ├── default.html
-  │   └── post.html
-  ├── _posts
-  │   └── 2020-01-01-example.html
-  ├── _resources
-  │   └── favicons.ai
-  ├── _sass
-  │   ├── _grid.scss
-  │   ├── _normalize.scss           [http://necolas.github.io/normalize.css/]
-  │   ├── _queries.scss             [Configurable media queries]
-  │   ├── _styles.scss
-  │   ├── _type.scss
-  │   ├── _variables.scss
-  │   └── i.scss                    [Imports .scss files, compiles to css/i.css]
-  ├── css
-  │   └── i.css                     [1.8KB minified / 214B gzipped - includes normalize.css]
-  ├── favicon.icns
-  ├── favicon.ico
-  ├── index.html                    [index file that's served up at root. The "homepage" if you will.]
-  ├── touch-icon-ipad-precomposed.png
-  ├── touch-icon-ipad-retina-precomposed.png
-  ├── touch-icon-iphone-precomposed.png
-  └── touch-icon-iphone-retina-precomposed.png
-```
-
-# Rake Tasks
-## WAIT I'M A DESIGNER WHAT IS RAKE 
-Rake is super simple. Don't be afraid. In this instance it's used to map unix commands
-to "rake tasks". It's a lot easier to remember 'rake dev' then jekyll serve --watch, well 
-it is for me anyways. If you don't like any of these commands, don't be scared. Rakefile
-is a super easy file to edit - even if it looks scary because it doesn't have an extension.
-
-Start the jekyll server on port 4000. Preview in your browser at http://localhost:4000
-### rake dev
-```
-jekyll serve --watch
-```
-
-Run this to start sass development and preserve css comments. Helpful for debugging. Outputs to css/includes.css. 
-### rake sass
-```
-sass --watch _sass:css
-```
-
-Run this to start the sass autocompiler with minified outpu. Outputs to /nkd/css/i.css.
-### rake minify
-```
-sass --watch _sass:css --style compressed
-```
-
-Run this to delete the _site directory. Use if you don't want to keep generated site locally unless actively developing.
-### rake clean
-```
-rm -rf _site
-```
+The master and gh-pages branch do not share the same ancestry. Please treat them as completely separate git repositories!
 
 
-# Resources
+## License
 
-There is an included Adobe Illustrator file that has artboards for every favicon size you'll need.
-If you're into that sort of thing. There are premade favicons you will want to replace or remove
-reference to.
-
-# Author
-[MRMRS](http://mrmrs.cc "Adam Morse - Designer Developer")
-
-# License
-This work is licensed under a [Creative Commons Attribution 3.0 Unported
-License](http://creativecommons.org/licenses/by/3.0/ "Creative Commons
-License").
+[MIT](http://opensource.org/licenses/MIT)
