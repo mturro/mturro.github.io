@@ -3,7 +3,6 @@ published: true
 ---
 
 ## this is written in haste and may contain errors
-![](/_posts/dark_beard_train.jpg)
 the thing is, this is not really a poem as much as it is a proof of concept... a test of software... or simply a way to **try to get ideas across** in a way that lets the rest of my day follow without any of the frustration and... I'm going to stop there.
 
 It's 4:30PM.
